@@ -1,0 +1,23 @@
+const cookieBox = document.querySelector(".obal"),
+  buttons = document.querySelectorAll(".button");
+const executeCodes = () => {
+  //if cookie contains codinglab it will be returned and below of this code will not run
+  if (document.cookie.includes("google-maps")){
+    document.getElementById('frame').innerHTML= '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1103.8360694257633!2d17.13137035979684!3d48.85097495226074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47132e51b9b4181f%3A0x55a645a7df8e80bc!2sHorn%C3%AD%20Valy%203859%2F4%2C%20695%2001%20Hodon%C3%ADn!5e0!3m2!1scs!2scz!4v1689024271756!5m2!1scs!2scz" style="border: 0" loading="lazy"></iframe>';
+    return;
+  } 
+  cookieBox.classList.add("show");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      cookieBox.classList.remove("show");
+      //if button has acceptBtn id
+      if (button.id == "acceptBtn") {
+        //set cookies for 1 month. 60 = 1 min, 60 = 1 hours, 24 = 1 day, 30 = 30 days
+        document.cookie = "orto-ho.cz= google-maps; max-age=" + 60 * 60 * 24 * 30;
+        document.getElementById('frame').innerHTML= '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1103.8360694257633!2d17.13137035979684!3d48.85097495226074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47132e51b9b4181f%3A0x55a645a7df8e80bc!2sHorn%C3%AD%20Valy%203859%2F4%2C%20695%2001%20Hodon%C3%ADn!5e0!3m2!1scs!2scz!4v1689024271756!5m2!1scs!2scz" style="border: 0" loading="lazy"></iframe>';
+      }
+    });
+  });
+};
+//executeCodes function will be called on webpage load
+window.addEventListener("load", executeCodes);

@@ -1,0 +1,20 @@
+@mixin zarovani {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin right {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  right: 0;
+  z-index: 1;
+}
+
+@mixin left {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  left: 0;
+  opacity: 0.65;
+}

@@ -1,0 +1,88 @@
+@use "../util" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-margin-top: 90px;
+}
+
+body {
+  background-color: $white;
+  font-family: $spectral;
+  color: $gray;
+  font-size: $fs-p;
+}
+
+h1 {
+  font-family: $spectral;
+  font-size: $fs-xl-mobile;
+  color: $fialova;
+  padding-top: 1rem;
+  line-height: 4rem;
+
+  @media screen and (min-width: 972px) {
+    font-size: $fs-xl-tablet;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: $fs-xl;
+  }
+}
+
+h2 {
+  padding: 1.5rem 0;
+  font-family: $spectral;
+  font-size: $fs-l-mobile;
+  color: $fialova;
+  line-height: $line;
+
+  @media screen and (min-width: 972px) {
+    font-size: $fs-l-tablet;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: $fs-l;
+  }
+}
+
+h3 {
+  padding: 0.7rem 0;
+  font-family: $spectral;
+  font-size: $fs-m-mobile;
+  color: $fialova;
+
+  @media screen and (min-width: 972px) {
+    font-size: $fs-m-tablet;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: $fs-m;
+  }
+}
+
+ul {
+  list-style-type: none;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  font-family: $spectral;
+  font-size: $fs-a-mobile;
+  color: black;
+
+  @media screen and (min-width: 972px) {
+    font-size: $fs-a-tablet;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: $fs-a;
+  }
+}
+
+p {
+  text-align: justify;
+  text-indent: 2rem;
+}

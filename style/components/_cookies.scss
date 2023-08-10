@@ -1,0 +1,96 @@
+@use "../util" as *;
+
+.obal {
+  position: fixed;
+  right: -370px;
+  bottom: 30px;
+  max-width: 350px;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px 25px 22px;
+  transition: right 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+
+  @media screen and (max-width: 972px) {
+    bottom: 0;
+  }
+
+  &.show {
+    right: 20px;
+
+    @media screen and (max-width: 972px) {
+      max-width: 90%;
+      margin: 0 5%;
+      right: auto;
+    }
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    padding-bottom: 0rem;
+    i {
+      color: $fialova;
+      font-size: 32px;
+    }
+
+    h2 {
+      color: $fialova;
+      font-weight: 500;
+      font-size: 2rem;
+      padding: 0;
+      line-height: 2rem;
+      text-align: center;
+    }
+  }
+
+  .data {
+    margin-top: 16px;
+
+    p {
+      color: #333;
+      font-size: 16px;
+      text-indent: 0;
+      a {
+        color: $fialova;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .buttons {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .button {
+      border: none;
+      color: #fff;
+      padding: 8px 0;
+      border-radius: 4px;
+      background: $fialova;
+      cursor: pointer;
+      width: calc(100% / 2 - 10px);
+      transition: all 0.2s ease;
+    }
+    #acceptBtn:hover {
+      background-color: $fialova-hover;
+    }
+    #declineBtn {
+      border: 2px solid $fialova;
+      background-color: #fff;
+      color: $fialova;
+    }
+    #declineBtn:hover {
+      background-color: $fialova-hover;
+      color: #fff;
+    }
+  }
+}

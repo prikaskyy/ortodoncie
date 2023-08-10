@@ -1,0 +1,661 @@
+@use "../util" as *;
+
+main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  .hero {
+    @include zarovani;
+    background-image: url(../assets/img/page/03.webp);
+    background-position: right;
+    background-size: cover;
+
+    @media screen and (max-width: 972px) {
+      // background-image: url(../assets/img/page/bg-invisible.png);
+      // background-image: url(../assets/img/page/bg-icons.png);
+      background-image: url(../assets/img/page/hero-mob.png);
+      background-position: 50% 0%;
+    }
+
+    .hero-layout {
+      height: 66vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @media screen and (max-width: 972px) {
+        height: calc(100vh - 90px);
+      }
+
+      .nadpis {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto 0;
+        max-width: 50%;
+
+        @media screen and (max-width: 972px) {
+          max-width: 100%;
+        }
+
+        @media screen and (max-width: 972px) {
+          max-width: 100%;
+        }
+
+        .nadpis-box {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          z-index: 2;
+
+          @media screen and (max-width: 972px) {
+            align-items: center;
+          }
+
+          h1 {
+            @media screen and (max-width: 972px) {
+              color: $white;
+            }
+          }
+
+          .slogan {
+            font-size: $fs-m;
+            font-family: $spectral;
+            color: $gray;
+            display: block;
+            text-align: center;
+
+            @media screen and (max-width: 972px) {
+              color: $white;
+              font-size: 1.5rem;
+            }
+          }
+
+          .ctas {
+            display: flex;
+            padding-top: 4rem;
+            gap: 2rem;
+            @media screen and (max-width: 972px) {
+              flex-direction: column;
+              padding-top: 2rem;
+            }
+          }
+
+          .cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 20px;
+            padding: 11px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 0 0 3px $fialova;
+
+            :last-child {
+              letter-spacing: 0.1rem;
+              font-size: 1.25rem;
+            }
+          }
+
+          .cta1 {
+            background-color: $fialova;
+            color: $white;
+            @media screen and (max-width: 972px) {
+              background-color: transparent;
+              box-shadow: 0 0 0 3px $white;
+              border-radius: 20px;
+            }
+
+            :first-child {
+              width: 20px;
+            }
+
+            :nth-child(2) {
+              display: none;
+            }
+
+            &:hover {
+              background-color: transparent;
+
+              @media screen and (max-width: 972px) {
+                background-color: $white;
+                box-shadow: 0 0 0 3px $white;
+              }
+
+              :first-child {
+                display: none;
+              }
+
+              :nth-child(2) {
+                display: block;
+              }
+
+              :last-child {
+                color: $fialova;
+              }
+            }
+          }
+
+          .cta2 {
+            color: $fialova;
+            box-shadow: 0 0 0 3px $fialova;
+
+            :first-child {
+              display: none;
+            }
+
+            :nth-child(2) {
+              width: 20px;
+            }
+
+            @media screen and (max-width: 972px) {
+              background-color: transparent;
+              box-shadow: 0 0 0 3px $white;
+              border-radius: 20px;
+              color: $white;
+              :first-child {
+                display: block;
+                width: 20px;
+              }
+
+              :nth-child(2) {
+                display: none;
+              }
+            }
+
+            &:hover {
+              background-color: $fialova;
+
+              :first-child {
+                display: block;
+                width: 20px;
+              }
+
+              :nth-child(2) {
+                display: none;
+              }
+
+              :last-child {
+                color: $white;
+              }
+
+              @media screen and (max-width: 972px) {
+                background-color: $white;
+                box-shadow: 0 0 0 3px $white;
+              }
+            }
+          }
+        }
+      }
+      .scroll {
+        align-self: center;
+        width: 70px;
+        padding-bottom: 1rem;
+        cursor: pointer;
+        animation: scroll 1.5s ease-in-out infinite alternate;
+
+        @media screen and (max-width: 972px) {
+          padding-bottom: 3rem;
+        }
+      }
+
+      #scroll-white {
+        display: none;
+        @media screen and (max-width: 972px) {
+          display: block;
+        }
+      }
+
+      #scroll-fialova {
+        display: block;
+        @media screen and (max-width: 972px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .odstaveni {
+    padding-top: 3%;
+  }
+
+  .zuby {
+    @include zarovani;
+    background-image: url(../assets/img/page/brace.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 45%;
+    z-index: 2;
+
+    @media screen and (max-width: 1200px) {
+      background-position: 0 45%;
+    }
+
+    @media screen and (max-width: 972px) {
+      background-image: url("");
+    }
+
+    .zuby-layout {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding-bottom: 5rem;
+
+      .info {
+        min-width: 450px;
+        padding: 15% 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        background-image: url(../assets/img/icon/zub.svg);
+        background-repeat: no-repeat;
+        background-size: 420px, cover;
+        background-position: right;
+        padding-bottom: 15rem;
+
+        span {
+          margin-left: -1.2rem;
+        }
+
+        a {
+          color: $white;
+        }
+
+        h3 {
+          color: $white;
+          padding-bottom: 2rem;
+          margin-left: -2rem;
+        }
+
+        @media screen and (max-width: 1200px) {
+          padding-bottom: 14rem;
+          h3 {
+            font-size: 1.5rem;
+            padding-bottom: 1rem;
+          }
+        }
+
+        @media screen and (max-width: 972px) {
+          margin-top: 3rem;
+          padding: 3rem;
+          background-color: $fialova;
+          min-width: 350px;
+          border-radius: 1rem;
+
+          h3 {
+            padding-bottom: 1rem;
+            margin-left: 0rem;
+          }
+
+          span {
+            margin-left: 0rem;
+          }
+        }
+      }
+      @media screen and (max-width: 972px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+  }
+
+  .aktuality {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    z-index: 4;
+
+    span {
+      font-size: 2rem;
+      padding: 0 5%;
+      text-align: center;
+
+      @media screen and (max-width: 972px) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .sekce {
+    @include zarovani;
+    background-color: $fialova;
+
+    .sekce-layout {
+      display: flex;
+      align-items: flex-start;
+      padding-bottom: 5rem;
+      padding-top: 2rem;
+      gap: 2rem;
+
+      h2 {
+        padding-top: 0;
+      }
+
+      ul {
+        list-style-type: circle;
+      }
+
+      .sekce-img {
+        // background-size: cover;
+        // background-position: center;
+        // border-radius: $border-rad;
+        // background-image: url(https://prikasky.cz/orto-ho4/assets/img/page/spolecna.webp);
+        // background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+
+        img {
+          max-height: 550px;
+          border-radius: 1rem;
+          margin: 0 auto;
+
+          @media screen and (max-width: 972px) {
+            max-height: 450px;
+          }
+        }
+
+        @media screen and (max-width: 1200px) {
+          margin-top: 5%;
+        }
+      }
+
+      .sekce-odstavec {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: $white;
+
+        h2 {
+          color: $white;
+        }
+      }
+
+      @media screen and (max-width: 972px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding-bottom: 4rem;
+
+        h2 {
+          text-align: center;
+        }
+
+        .sekce-img {
+          align-self: center;
+          width: 100%;
+        }
+
+        .sekce-odstavec {
+          width: 100%;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .mapa iframe {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+  }
+
+  .mapa img {
+    width: 100%;
+    margin: 0;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .nabidka {
+    @include zarovani;
+    flex-direction: column;
+    align-items: center;
+
+    .nabidka-nadpis {
+      justify-self: flex-start;
+    }
+
+    .nabidka-podnadpis {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+
+      h3 {
+        @media screen and (max-width: 972px) {
+          text-align: center;
+        }
+      }
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: left;
+      align-self: flex-end;
+    }
+
+    .snimaci {
+      max-width: 60%;
+      display: flex;
+      gap: 2rem;
+      margin: 0 auto;
+      background-color: $fialova;
+      color: $white;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+
+      @media screen and (max-width: 1200px) {
+        max-width: 100%;
+      }
+
+      .snimaci-layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        span {
+          padding-top: 1rem;
+          align-self: flex-start;
+        }
+      }
+
+      img {
+        width: 300px;
+        border-radius: 20px;
+
+        @media screen and (max-width: 972px) {
+          width: 400px;
+        }
+      }
+      @media screen and (max-width: 972px) {
+        flex-direction: column-reverse;
+        max-width: 100%;
+        align-items: center;
+      }
+    }
+
+    .foliova {
+      display: flex;
+      gap: 2rem;
+      margin: 0 auto;
+      background-color: $fialova;
+      color: $white;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+
+      .foliova-layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        span {
+          padding-top: 1rem;
+          align-self: flex-start;
+        }
+
+        :nth-child(2) {
+          padding-top: 2rem;
+          text-indent: 0;
+        }
+      }
+
+      img {
+        width: 420px;
+        border-radius: 20px;
+
+        @media screen and (max-width: 972px) {
+          width: 400px;
+        }
+      }
+      @media screen and (max-width: 972px) {
+        flex-direction: column-reverse;
+        max-width: 100%;
+        align-items: center;
+      }
+    }
+
+    .nabidka-layout {
+      display: flex;
+      gap: 2rem;
+      color: $white;
+      padding-bottom: 4rem;
+      align-items: center;
+      justify-content: stretch;
+      align-items: stretch;
+
+      @media screen and (max-width: 972px) {
+        flex-direction: column;
+      }
+
+      .odstavec {
+        background-color: $fialova;
+        display: grid;
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem;
+        padding-top: 0;
+        border-radius: 1rem;
+        flex-grow: 1;
+        flex-basis: 0;
+        justify-content: flex-start;
+
+        h3 {
+          color: $white;
+        }
+
+        img {
+          width: 300px;
+          border-radius: 1rem;
+          align-self: center;
+          justify-self: center;
+          margin-bottom: 2rem;
+
+          @media screen and (max-width: 972px) {
+            width: 400px;
+          }
+        }
+
+        span {
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .nas-tym {
+    @include zarovani;
+    background-color: $fialova;
+
+    .nas-tym-layout {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+
+      img {
+        width: auto;
+        width: calc(100% / 3);
+      }
+
+      @media screen and (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 60%;
+        }
+      }
+    }
+
+    h2 {
+      color: $white;
+      text-align: center;
+    }
+  }
+
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $fialova;
+
+    .icons {
+      display: flex;
+      justify-content: center;
+    }
+
+    i {
+      font-size: 1.2rem;
+      height: 46px;
+      width: 46px;
+      text-align: center;
+      line-height: 46px;
+      background-color: $gray;
+      color: $white;
+      border-radius: 50%;
+    }
+
+    .carousel {
+      display: flex;
+      font-size: 0px;
+      cursor: pointer;
+      overflow: hidden;
+      scroll-behavior: smooth;
+
+      &.dragging {
+        cursor: grab;
+        scroll-behavior: auto;
+
+        img {
+          pointer-events: none;
+        }
+      }
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: calc(100% / 3 - 1%);
+        margin-left: 1%;
+
+        :first-child {
+          margin-left: 0px;
+        }
+
+        @media screen and (max-width: 900px) {
+          width: calc(100% / 2);
+        }
+        @media screen and (max-width: 550px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

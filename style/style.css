@@ -1,0 +1,122 @@
+
+.sr-only {
+    border: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+  .btn {
+    border: none;
+    border-radius: 1.75rem;
+    cursor: pointer;
+    display: block;
+    font-size: 0.875rem;
+    line-height: 2;
+    text-decoration: none;
+    padding: 0.5rem 1.75rem;
+    transition: 0.4s ease-in-out;
+  }
+  @media (hover: hover) {
+    .btn:hover {
+      background-color: var(--bg-blue);
+    }
+  }
+  @media (min-width: 43.125rem) {
+    .btn {
+      font-size: 1rem;
+      line-height: 1.8;
+      padding: 0.875rem 2.8125rem;
+    }
+  }
+  
+  .btn--primary {
+    background-color: #86878B;
+  }
+
+  .btn--primary:hover {
+    background-color: #814072;
+  }
+
+  
+  .btn--gallery {
+    border-radius: 50%;
+    height: 4rem;
+    padding: 1.5rem;
+    width: 4rem;
+  }
+  
+  .gallery {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .portfolio{
+    padding: 4rem 0;
+  }
+
+ .portfolio-title {
+    text-align: center;
+  }
+  
+  .gallery-images {
+    --gap: 0.9375rem;
+    display: flex;
+    gap: var(--gap);
+    justify-content: center;
+    padding: 2rem 0 1.5rem 0;
+    transition: all 0.3s;
+  }
+  .gallery-images div {
+    border-radius: 0.625rem;
+    flex-shrink: 0;
+    height: 14.25rem;
+    scroll-snap-align: center;
+  }
+  @media (min-width: 43.125rem) {
+    .gallery-images div {
+      height: 22.5rem;
+    }
+  }
+  .gallery-images img {
+    border-radius: 0.625rem;
+    height: 100%;
+    width: auto;
+  }
+  @media (min-width: 43.125rem) {
+    .gallery-images {
+      --gap: 1.875rem;
+      padding: 3.5rem 0 1.5rem 0;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-images {
+      transition: all 0.001s;
+    }
+  }
+  
+ .gallery-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
+  @media (min-width: 43.125rem) {
+    .gallery-btns {
+      padding-top: 1rem;
+    }
+  }
+  
+ 
+  

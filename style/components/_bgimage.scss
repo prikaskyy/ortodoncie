@@ -1,0 +1,113 @@
+@use "../util" as *;
+@media screen and (max-width: 1549px) {
+  #index-prava,
+  #index-leva,
+  #nas-tym-prava,
+  #nas-tym-leva,
+  #index-prava1 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  //index
+  #index-prava {
+    @include right;
+    margin: 0px 30px;
+  }
+
+  #index-prava1 {
+    @include right;
+    margin: 500px 130px;
+    width: 100px;
+  }
+
+  #index-leva {
+    @include left;
+    width: 125px;
+    margin: 200px 40px;
+  }
+  #nas-tym-prava {
+    @include right;
+    margin: 400px 40px;
+  }
+
+  #nas-tym-leva {
+    @include left;
+    width: 150px;
+    margin: 50px 40px;
+  }
+}
+@media screen and (max-width: 972px) {
+  #icon-1,
+  #icon-2,
+  #icon-3,
+  #icon-4,
+  #icon-5,
+  #icon-6,
+  #icon-7 {
+    display: none;
+  }
+}
+
+#icon-1 {
+  @include left;
+  width: 180px;
+  top: 20vh;
+  margin-left: 5%;
+}
+#icon-2 {
+  @include left;
+  width: 160px;
+  top: 40vh;
+  margin-left: 2%;
+}
+#icon-3 {
+  @include left;
+  width: 140px;
+  top: 50vh;
+  margin-left: 11%;
+}
+#icon-4 {
+  @include left;
+  width: 120px;
+  top: 65vh;
+  margin-left: 18%;
+}
+#icon-5 {
+  @include left;
+  width: 100px;
+  top: 60vh;
+  margin-left: 26%;
+}
+#icon-6 {
+  @include left;
+  width: 80px;
+  top: 55vh;
+  margin-left: 33%;
+}
+#icon-7 {
+  @include left;
+  width: 60px;
+  top: 65vh;
+  margin-left: 40%;
+}
+
+@media screen and (max-width: 1580px) {
+  #icon-1 {
+    display: none;
+  }
+  #icon-2 {
+    display: none;
+  }
+  #icon-3 {
+    width: 90px;
+    top: 58vh;
+  }
+  #icon-4 {
+    width: 75px;
+  }
+  #icon-5 {
+    width: 60px;
+  }
+}
